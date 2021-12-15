@@ -10,10 +10,14 @@ scalaVersion := "2.13.6"
 
 lazy val calculators = project
   .dependsOn(api)
+  .enablePlugins(JavaAppPackaging)
+  .enablePlugins(DockerPlugin)
   .settings(
     libraryDependencies ++= Dependencies.calculatorDependencies
   )
 
-lazy val api = project.settings(
+lazy val api = project
+  .enablePlugins(JavaAppPackaging)
+  .settings(
   libraryDependencies ++= Dependencies.apiDependencies
 )
