@@ -71,3 +71,9 @@
    
    ~run
    ```
+
+11. Build package using sbt native packager
+
+   ```shell
+   ;clean ;stage
+   ```

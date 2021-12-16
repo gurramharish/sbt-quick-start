@@ -1,3 +1,5 @@
+import com.typesafe.sbt.packager.docker.ExecCmd
+
 name := "sbt-getting-started"
 
 version := "0.1"
@@ -11,7 +13,6 @@ scalaVersion := "2.13.6"
 lazy val calculators = project
   .dependsOn(api)
   .enablePlugins(JavaAppPackaging)
-  .enablePlugins(DockerPlugin)
   .settings(
     libraryDependencies ++= Dependencies.calculatorDependencies
   )
